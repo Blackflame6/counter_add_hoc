@@ -1,5 +1,17 @@
-const Counter = () => {
-    return <h1>This comp should be the button that changes the count state</h1>
+const Counter = ({setCount, count}) => {
+
+    const reduceCount = ()=> {
+        setCount(count - 1)
+    }
+    const increaseCount = () => {
+        setCount(count + 1)
+    }
+    return (
+        <>
+        <button onClick = {reduceCount}> - </button>
+        <button onClick = {increaseCount}> + </button>
+        </>
+    )
 }
 
 export default Counter
