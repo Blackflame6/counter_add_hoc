@@ -1,15 +1,15 @@
-const Counter = ({setCount, count}) => {
+const Counter = ({reduceCount, increaseCount}) => {
 
-    const reduceCount = ()=> {
-        setCount(count - 1)
+    const handleReduce = ()=> {
+       reduceCount()
     }
-    const increaseCount = () => {
-        setCount(count + 1)
-    }
+   const handleIncrease =()=> {
+    increaseCount()
+   }
     return (
         <>
-        <button onClick = {reduceCount}> - </button>
-        <button onClick = {increaseCount}> + </button>
+        <button onClick = {handleReduce}> - </button>
+        <button onClick = {handleIncrease}> + </button>
         </>
     )
 }

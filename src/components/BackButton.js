@@ -1,13 +1,13 @@
-const BackButton = ({setCount}) => {
+const BackButton = ({countToZero}) => {
 
-    const goBack = () => {
-       setCount(0)
-    }
+  const handleClick = ()=> {
+    countToZero()
+  }
 
     return (
         <>
         <h1>Count limit reached</h1>
-        <button onClick = {goBack}>Reset</button>
+        <button onClick = {handleClick}>Reset</button>
         </>
 
     )
